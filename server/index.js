@@ -18,6 +18,8 @@ app.use(express.json())
 app.use('/api/user', userRouter)
 app.use('/api/auth', authRouter)
 
+
+//MIDDLEWARE
 app.use((err, req, res, next)=>{
     const statusCode = err.statusCode || 500;
     const message = err.message || 'Internal server error'
